@@ -3,18 +3,20 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'boba-meets-churros',
+    modulePrefix: 'boba-meets-churro',
     environment,
     rootURL: '/',
     locationType: 'auto',
+
     firebase: {
       apiKey: 'AIzaSyAqLN1EK57Hkw53IkJzFiCXm78dngk04QU',
       authDomain: 'bobameetschrurros.firebaseapp.com',
       databaseURL: 'https://bobameetschrurros.firebaseio.com',
-      projectId: 'bobameetschrurro',
-      storageBucket: '',
+      projectId: "bobameetschrurros",
+      storageBucket: 'bobameetschrurros.appspot.com',
       messagingSenderId: '842343871472'
     },
+
     // if using ember-cli-content-security-policy
     contentSecurityPolicy: {
       'script-src': "'self' 'unsafe-eval' apis.google.com",
@@ -41,10 +43,10 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
