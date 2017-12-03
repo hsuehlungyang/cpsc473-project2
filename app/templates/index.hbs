@@ -233,7 +233,7 @@
                 </div>
 
                 <div class="text-center" style='padding-top: 15px;'>
-                  <button class="btn btn-indigo" style='font-size: 20px;' {{action 'saveUser'}}>Sign up</button>
+                  {{#link-to 'login' }}<button class="btn btn-indigo" style='font-size: 20px;' {{action 'saveUser'}}>Sign up</button>{{/link-to}}
                   <div class="inline-ul text-center d-flex justify-content-center" style='padding-top: 20px;'>
                     {{#link-to 'login' }}<a href="" class="white-text">Already a user?</a>{{/link-to}}
                     <hr class="hr-light mb-3 mt-4">
