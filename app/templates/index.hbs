@@ -58,13 +58,49 @@
                   <h3 class="font-bold">Tell Us About Yourself</h3>
                 </div>
 
+                    <div class="md-form form-horizontal row black-text" style='padding: 15px; font-size: 22px;'>
+                      <!-- <table>
+                      <tr>
+                      	<th>Your Gender</th>
+                      </tr>
+                      {{#each items as |item|}}
+                      	<tr>
+                          <td>
+                            <input type="checkbox" onchange={{action (action "valueHasChanged" item) value="target.checked"}}>
+                          </td>
+                          <td>{{item.name}}</td>
+                        </tr>
+                      {{/each}}
+                      </table>
+                      <br>
+                      <br>
+                      <p>Your Selected Items:</p>
+                      <ul>
+                        {{#each selectedItems as |item|}}
+                          <li>{{item.name}}</li>
+                          {{else}}
+                          <em>No items selected</em>
+                        {{/each}}
+                      </ul> -->
 
-                <div class="md-form form-horizontal row black-text" style='padding: 15px; font-size: 22px;'>
+
                   <div class="col-xs-6 col-md-3">
                     <label for="form3" class="active">Your Gender</label>
                   </div>
+                  <table>
                   <div class="col-xs-12 col-sm-6 col-md-9">
-                    <label class="container">Female
+                    {{#each items as |item|}}
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="gender" onchange={{action (action "valueHasChanged" item) value="target.checked"}}>
+                        </td>
+                        <td>{{item.name}}</td>
+                      </tr>
+                    {{/each}}
+                  </div>
+                </table>
+
+                    <!-- <label class="container">Female
                       {{input type="radio" name="gender" checked=isFemale}}
                       <span class="checkmark"></span>
                     </label>
@@ -76,7 +112,7 @@
                     {{input type="radio" name="gender" checked=isUnknownGender}}
                       <span class="checkmark"></span>
                     </label>
-                  </div>
+                  </div> -->
                 </div>
 
                 <div class="md-form form-horizontal row" style='padding: 15px; font-size: 22px;'>
