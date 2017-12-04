@@ -1,7 +1,4 @@
-<!--Intro Section-->
-<!-- <section class="bg hm-gradient fill">
-  <div class="full-bg-img fill"> -->
-    <div class="container flex-center">
+<div class="container-reg flex-center">
       <div class="flex align-items-center">
 
           <div class="text-center">
@@ -17,8 +14,8 @@
             <div class="card">
               <div class="card-body">
                 <!--Header-->
-                <div class="text-center">
-                  <h3 class="white-text"><i class="fa fa-user white-text"></i> Login:</h3>
+                <div class="text-center"  style='padding-top: 10px;'>
+                  <h3 class="font-bold">Login</h3>
                   <hr class="hr-light">
                 </div>
 
@@ -28,7 +25,7 @@
                     <label for="form3" class="active"><i class="fa fa-user prefix white-text active"></i> Username</label>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-9">
-                    {{input type="name" value=name class="form-control" placeholder="Enter username"  autofocus="autofocus"}}
+                    {{input type="name" value=name class="form-control" placeholder="Username"  autofocus="autofocus"}}
                   </div>
                 </div>
 
@@ -42,7 +39,7 @@
                 </div>
 
                 <div class="text-center" style='padding-top: 15px'>
-                  {{#link-to 'profile' }}<button class="btn btn-indigo" style='font-size: 20px;'>Login</button>{{/link-to}}
+                  {{#link-to 'profile' }}<button class="btn btn-indigo" style='font-size: 20px;' {{action "signIn"}}>Login</button>{{/link-to}}
                   <hr class="hr-light mb-3 mt-4">
                   <div class="inline-ul text-center d-flex justify-content-center">
                     <a class="icons-sm tw-ic"><i class="fa fa-twitter white-text"></i></a>

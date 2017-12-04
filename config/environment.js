@@ -8,6 +8,10 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
 
+    torii: {
+    sessionServiceName: 'session'
+    },
+
     firebase: {
       apiKey: 'AIzaSyAqLN1EK57Hkw53IkJzFiCXm78dngk04QU',
       authDomain: 'bobameetschrurros.firebaseapp.com',

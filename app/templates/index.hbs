@@ -1,4 +1,4 @@
-    <div class="container-reg flex-center">
+<div class="container-reg flex-center">
       <div class="flex align-items-center">
 
           <div class="text-center">
@@ -58,46 +58,76 @@
                   <h3 class="font-bold">Tell Us About Yourself</h3>
                 </div>
 
-
                 <div class="md-form form-horizontal row black-text" style='padding: 15px; font-size: 22px;'>
                   <div class="col-xs-6 col-md-3">
                     <label for="form3" class="active">Your Gender</label>
                   </div>
+                  <table>
                   <div class="col-xs-12 col-sm-6 col-md-9">
-                    <label class="container">Female
-                      {{input type="checkbox" name="gender" checked=isFemale}}
+                    {{#each genders as |gender|}}
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="gender" onchange={{action (action "valueHasChangedGender" gender) value="target.checked"}}>
+                        </td>
+                        <td>{{gender.name}}</td>
+                      </tr>
+                    {{/each}}
+                  </div>
+                </table>
+
+                <div class="md-form form-horizontal row black-text" style='padding: 15px; font-size: 22px;'>
+                  <div class="col-xs-6 col-md-3">
+                    <label for="form3" class="active">Your Personality Type</label>
+                  </div>
+                  <table>
+                  <div class="col-xs-12 col-sm-6 col-md-9">
+                    {{#each personalitytypes as |personalitytype|}}
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="personalitytype" onchange={{action (action "valueHasChangedPersonType" personalitytype) value="target.checked"}}>
+                        </td>
+                        <td>{{personalitytype.name}}</td>
+                      </tr>
+                    {{/each}}
+                  </div>
+                </table>
+              </div>
+            </div>
+
+                    <!-- <label class="container">Female
+                      {{input type="radio" name="gender" checked=isFemale}}
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">Male
-                      {{input type="checkbox" name="gender" checked=isMale}}
+                      {{input type="radio" name="gender" checked=isMale}}
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">I'd Rather Not Say
-                    {{input type="checkbox" name="gender" checked=isUnknownGender}}
+                    {{input type="radio" name="gender" checked=isUnknownGender}}
                       <span class="checkmark"></span>
                     </label>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="md-form form-horizontal row" style='padding: 15px; font-size: 22px;'>
+                <!-- <div class="md-form form-horizontal row" style='padding: 15px; font-size: 22px;'>
                   <div class="col-xs-6 col-md-3">
                     <label for="form3" class="active">Personality Type</label>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-9">
                     <label class="container">Extrovert
-                      {{input type="checkbox" name="personalitytype" checked=isExtrovert}}
+                      {{input type="radio" name="personalitytype" checked=isExtrovert}}
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">Introvert
-                      {{input type="checkbox" name="personalitytype" checked=isIntrovert}}
+                      {{input type="radio" name="personalitytype" checked=isIntrovert}}
                       <span class="checkmark"></span>
                     </label>
                     <label class="container">Ambivert
-                      {{input type="checkbox" name="personalitytype" checked=isAmbitious}}
+                      {{input type="radio" name="personalitytype" checked=isAmbitious}}
                       <span class="checkmark"></span>
                     </label>
                   </div>
-                </div>
+                </div> -->
 
                 <div class="md-form form-horizontal row" style='padding: 15px; font-size: 22px;'>
                   <div class="col-xs-6 col-md-3">
