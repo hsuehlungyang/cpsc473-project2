@@ -47,6 +47,7 @@ button, select, html, textarea, input {
 
 .black-text {
   color: black;
+  font-weight: normal;
 }
 
 .hm-gradient .full-bg-img {
@@ -166,4 +167,8 @@ h6 {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+td {
+  width: 160px;
 }
