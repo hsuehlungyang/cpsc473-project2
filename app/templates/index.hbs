@@ -58,216 +58,60 @@
                   <h3 class="font-bold">Tell Us About Yourself</h3>
                 </div>
 
-                    <div class="md-form form-horizontal row black-text" style='padding: 15px; font-size: 22px;'>
-                      <!-- <table>
-                      <tr>
-                      	<th>Your Gender</th>
-                      </tr>
-                      {{#each items as |item|}}
-                      	<tr>
-                          <td>
-                            <input type="checkbox" onchange={{action (action "valueHasChanged" item) value="target.checked"}}>
-                          </td>
-                          <td>{{item.name}}</td>
-                        </tr>
-                      {{/each}}
-                      </table>
-                      <br>
-                      <br>
-                      <p>Your Selected Items:</p>
-                      <ul>
-                        {{#each selectedItems as |item|}}
-                          <li>{{item.name}}</li>
-                          {{else}}
-                          <em>No items selected</em>
-                        {{/each}}
-                      </ul> -->
-
-
+                <div class="md-form form-horizontal row black-text" style='padding: 15px; font-size: 22px;'>
                   <div class="col-xs-6 col-md-3">
                     <label for="form3" class="active">Your Gender</label>
                   </div>
                   <table>
                   <div class="col-xs-12 col-sm-6 col-md-9">
-                    {{#each items as |item|}}
+                    {{#each genders as |gender|}}
                       <tr>
                         <td>
-                          <input type="checkbox" name="gender" onchange={{action (action "valueHasChanged" item) value="target.checked"}}>
+                          <input type="checkbox" name="gender" onchange={{action (action "valueHasChangedGender" gender) value="target.checked"}}>
                         </td>
-                        <td>{{item.name}}</td>
+                        <td>{{gender.name}}</td>
                       </tr>
                     {{/each}}
                   </div>
                 </table>
+              </div>
 
-                    <!-- <label class="container">Female
-                      {{input type="radio" name="gender" checked=isFemale}}
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Male
-                      {{input type="radio" name="gender" checked=isMale}}
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">I'd Rather Not Say
-                    {{input type="radio" name="gender" checked=isUnknownGender}}
-                      <span class="checkmark"></span>
-                    </label>
-                  </div> -->
-                </div>
-
-                <div class="md-form form-horizontal row" style='padding: 15px; font-size: 22px;'>
+                <div class="md-form form-horizontal row black-text" style='padding: 15px; font-size: 22px;'>
                   <div class="col-xs-6 col-md-3">
-                    <label for="form3" class="active">Personality Type</label>
+                    <label for="form3" class="active">Your Personality Type</label>
                   </div>
+                  <table>
                   <div class="col-xs-12 col-sm-6 col-md-9">
-                    <label class="container">Extrovert
-                      {{input type="radio" name="personalitytype" checked=isExtrovert}}
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Introvert
-                      {{input type="radio" name="personalitytype" checked=isIntrovert}}
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Ambivert
-                      {{input type="radio" name="personalitytype" checked=isAmbitious}}
-                      <span class="checkmark"></span>
-                    </label>
+                    {{#each personalitytypes as |personalitytype|}}
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="personalitytype" onchange={{action (action "valueHasChangedPersonType" personalitytype) value="target.checked"}}>
+                        </td>
+                        <td>{{personalitytype.name}}</td>
+                      </tr>
+                    {{/each}}
                   </div>
-                </div>
+                </table>
+              </div>
 
-                <div class="md-form form-horizontal row" style='padding: 15px; font-size: 22px;'>
-                  <div class="col-xs-6 col-md-3">
-                    <label for="form3" class="active">Your Personality Traits
-                    (Please Select 4 That Best Describe You)</label>
-                  </div>
-                  <div class="col-xs-6 col-md-3">
-                    <label class="container">Adventurous
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Ambitious
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Bubbly
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Charismatic
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Clever
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Compasionate
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Confident
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Considerate
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Courteous
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Detail-Oriented
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="col-xs-6 col-md-3">
-                    <label class="container">Easy-Going
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Energetic
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Generous
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Humble
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Impatient
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Independent
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Loyal
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Observant
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Open-Minded
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Optimistic
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="col-xs-6 col-md-3">
-                    <label class="container">Organized
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Passionate
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Patient
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Philosophical
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Perfectionist
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Resourceful
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Romantic
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Suave
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Sweet
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Witty
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
+              <div class="md-form form-horizontal row black-text" style='padding: 15px; font-size: 22px;'>
+                <div class="col-xs-6 col-md-3">
+                  <label for="form3" class="active">Your Personality Traits</label>
                 </div>
-
+                <table>
+                <div class="col-xs-12 col-sm-6 col-md-9">
+                  {{#each personalitytraits as |personalitytrait|}}
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="personalitytrait" onchange={{action (action "valueHasChangedPersonTrait" personalitytrait) value="target.checked"}}>
+                      </td>
+                      <td>{{personalitytrait.name}}</td>
+                    </tr>
+                  {{/each}}
+                </div>
+              </table>
+            </div>
+                  
                 <div class="text-center" style='padding-top: 15px;'>
                   {{#link-to 'login' }}<button class="btn btn-indigo" style='font-size: 20px;' {{action 'saveUser'}}>Sign up</button>{{/link-to}}
                   <div class="inline-ul text-center d-flex justify-content-center" style='padding-top: 20px;'>
