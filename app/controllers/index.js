@@ -1,9 +1,17 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
+    password: '',
+    confirmPassword: '',
+    emailAddress: '',
 
-    isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
+    isValidEmail: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
+    isMatchedPassword: Ember.computed('password', 'confirmPassword', function() {
+      return this.get('password') === this.get('confirmPassword');
+    }),
+    isValid: Ember.computed.and('isValidEmail', 'isMatchedPassword'),
     isDisabled: Ember.computed.not('isValid'),
+
 
     init() {
     this.genders = [
@@ -89,8 +97,14 @@ export default Controller.extend({
         const personalitytype = this.get('selectedPersonalityTypes');
         const personalitytrait = this.get('selectedPersonalityTraits');
 
+        alert(`Adding new user to our system: ${this.get('name')}`);
         const newInvitation = this.store.createRecord('invitation', { email: email, username: username, password: password, gender:gender, personalitytype:personalitytype, personalitytrait:personalitytrait });
         newInvitation.save();
+        this.set('responseMessage', `Thank you! We've just saved your profile.`);
+        this.set('emailAddress', '');
+        this.set('name', '');
+        this.set('password', '');
+        this.set('confirmPassword', '');
       }
     }
   });
