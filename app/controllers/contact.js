@@ -12,7 +12,7 @@ export default Controller.extend({
   actions: {
    sendMessage() {
      alert(`Sending the following message: ${this.get('message')}`);
-     this.set('responseMessage', `Thank you! Your message has been sent. Please wait for our response to ${this.get('emailAddress')}`);
+     this.set('responseMessage', `Thank you! Your message has been sent! Please wait for our response to ${this.get('emailAddress')}.`);
      this.set('emailAddress', '');
      this.set('message', '');
    }

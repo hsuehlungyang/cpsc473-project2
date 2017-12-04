@@ -1,24 +1,21 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
 
-  headerMessage: 'Coming Soon',
-  responseMessage: '',
-  emailAddress: '',
+    isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
+    isDisabled: Ember.computed.not('isValid'),
 
-  isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
-  isDisabled: Ember.computed.not('isValid'),
+    actions: {
 
-  actions: {
+      saveUser() {
+        const email = this.get('emailAddress');
+        const username = this.get('name');
+        const password = this.get('password');
+        const gender = this.get('gender');
+        const personalitytype = this.get('personalitytype');
 
-    saveInvitation() {
-      const email = this.get('emailAddress');
-
-      const newInvitation = this.store.createRecord('invitation', { email: email });
-      newInvitation.save();
-
-      this.set('responseMessage', `Thank you! We have just saved your email address: ${this.get('emailAddress')}`);
-      this.set('emailAddress', '');
+        const newInvitation = this.store.createRecord('invitation', { email: email, username: username, password: password, gender:gender, personalitytype:personalitytype });
+        newInvitation.save();
+      }
     }
-  }
-});
+  });
