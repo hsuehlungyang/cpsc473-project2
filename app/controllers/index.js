@@ -6,7 +6,7 @@ export default Controller.extend({
     isDisabled: Ember.computed.not('isValid'),
 
     init() {
-      this.genders = [
+    this.genders = [
       { id: 1, name: 'Female' },
       { id: 2, name: 'Male' },
       { id: 3, name: 'Rather Not Say' }

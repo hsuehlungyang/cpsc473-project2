@@ -6,4 +6,5 @@ export default DS.Model.extend({
   password: DS.attr('string'),
   gender: DS.attr('string'),
   personalitytype: DS.attr('string'),
+  personalitytrait: DS.attr('string'),
 });
