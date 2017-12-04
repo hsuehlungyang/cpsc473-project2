@@ -1,1 +1,53 @@
-<h1>Contact Us</h1>
+<div class="container-reg flex-center">
+  <div class="flex align-items-center">
+
+      <div class="text-center">
+        <div class="white-text">
+          <h1 class="h1 font-bold">Contact Us</h1>
+          <h6>You're just one click away from meeting the boba of your life.</h6>
+          <br>
+        </div>
+      </div>
+
+      <div class="container-reg">
+        <!--Form-->
+        <div class="card">
+          <div class="card-body">
+            <div class="text-center">
+              <h3 class="font-bold">Please let us know how we are doing and what we can do to make your experience better.</h3>
+
+              <div class="form-horizontal form-group form-group-lg row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2">
+                  {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2">
+                  {{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=message}}
+                </div>
+
+                <br/>
+                <div class="col-xs-10 col-xs-offset-2 col-sm-offset-4 col-sm-5 col-md-4">
+                  <button class="btn btn-success" disabled={{isDisabled}} {{action 'sendMessage'}}>Send message</button>
+                </div>
+              </div>
+
+
+              {{#if responseMessage}}
+              <div class="alert alert-success">{{responseMessage}}</div>
+              {{/if}}
+            </div>
+
+            <div class="text-center">
+              <hr class="hr-light mb-3 mt-4">
+              <div class="inline-ul text-center d-flex justify-content-center">
+                <a class="icons-sm tw-ic"><i class="fa fa-twitter white-text"></i></a>
+                <a class="icons-sm li-ic"><i class="fa fa-linkedin white-text"> </i></a>
+                <a class="icons-sm ins-ic"><i class="fa fa-instagram white-text"> </i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
