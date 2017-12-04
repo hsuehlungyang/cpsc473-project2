@@ -1,4 +1,4 @@
-# bobameetschurros
+# BobaMeetsChurros
 
 This is a fun dating web application where users can browse through other people’s profiles on their own and find matching profiles based on the common interests at a glance of their pages. The user has the option to decide whether they are interested or not at the push of a button, they can also send a private messages to such matches. 
 
