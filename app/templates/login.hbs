@@ -28,7 +28,7 @@
                     <label for="form3" class="active"><i class="fa fa-user prefix white-text active"></i> Username</label>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-9">
-                    {{input type="name" value=name class="form-control" placeholder="Username"  autofocus="autofocus"}}
+                    {{input type="name" value=name class="form-control" placeholder="Enter username"  autofocus="autofocus"}}
                   </div>
                 </div>
 
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="text-center" style='padding-top: 15px'>
-                  <button class="btn btn-indigo">Login</button>
+                  {{#link-to 'profile' }}<button class="btn btn-indigo" style='font-size: 20px;'>Login</button>{{/link-to}}
                   <hr class="hr-light mb-3 mt-4">
                   <div class="inline-ul text-center d-flex justify-content-center">
                     <a class="icons-sm tw-ic"><i class="fa fa-twitter white-text"></i></a>
