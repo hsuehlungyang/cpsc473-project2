@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import Ember from 'ember';
 
 export default Controller.extend({
   gender: '',
@@ -27,7 +28,6 @@ export default Controller.extend({
 
      const username = this.get('name');
      const password = this.get('password');
-     let gender = '';
 
      this.get('store').query('invitation', {filter: {name: ''}}).then(function(thaos) {
        let usernameAuthenticate = false;
@@ -43,7 +43,7 @@ export default Controller.extend({
          }
        }
        if(usernameAuthenticate) {
-         alert("Hi " + username);
+         //alert("Hi " + username);
        }
        else{
          alert("Wrong username or password");
