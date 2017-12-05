@@ -100,25 +100,23 @@ export default Controller.extend({
         //alert(`Adding new user to our system: ${this.get('name')}`);
         const newInvitation = this.store.createRecord('invitation', { email: email, username: username, password: password, gender:gender, personalitytype:personalitytype, personalitytrait:personalitytrait });
         this.get('store').query('invitation', {filter: {name: 'thao'}}).then(function(thaos) {
-          //console.log(thaos);
           let usernameTaken = false;
           let i = 0;
           for(i = 0; i < thaos.content.length; ++i) {
-            //console.log(thaos.content[i]._data.username);
             if(username == thaos.content[i]._data.username) {
               alert("Username taken");
               usernameTaken = true;
-              this.transitionToRoute('index');
               break;
             }
           }
           if(!usernameTaken) {
-            alert("Hi " + username);
+            //alert("Hi " + username);
           }
           else{
-            this.transitionToRoute('index');
+            this.refresh();
           }
         newInvitation.save();
+
         this.set('responseMessage', `Thank you! We've just saved your profile.`);
         this.set('emailAddress', '');
         this.set('name', '');

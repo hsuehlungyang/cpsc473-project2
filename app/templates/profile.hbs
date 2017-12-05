@@ -24,31 +24,29 @@
                 <div class="md-form form-vertical col" style='font-size: 20px;'>
                   <div class="text-center"  style='padding-top: 10px;'>
                     Your Name
-                    {{#each item in selectedItem}}
-                     <a href="#" {{action 'selectItem' item}}>
+                     <a href="#" {{action 'loadProfile'}}>
                       <div class ="black-text">{{item.username}}</div>
                     </a>
-                    {{/each}}
                     <div class ="black-text">
-                      {{selectedItem.username}}
+                      <p id="thisUser">user</p>
                     </div>
                   </div>
                   <div class="text-center"  style='padding-top: 10px;'>
                     Your Gender
                     <div class ="black-text">
-                      {{selectedItem.gender}}
+                      <p id="thisGender">user</p>
                     </div>
                   </div>
                   <div class="text-center"  style='padding-top: 10px;'>
                     Your Personality Type
                     <div class ="black-text">
-                      {{selectedItem.personalitytype}}
+                      <p id="thisPersonalityType">user</p>
                     </div>
                   </div>
                   <div class="text-center"  style='padding-top: 10px;'>
                     Your Personality Traits
                     <div class ="black-text">
-                      {{selectedItem.personalitytrait}}
+                      <p id="thisPersonalityTrait">user</p>
                     </div>
                   </div>
                 </div>
