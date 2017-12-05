@@ -1,7 +1,14 @@
-# boba-meets-churro
+# Boba Meets Churros
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a fun dating web application where users can browse through other people’s profiles on their own and find matching profiles based on the common interests at a glance of their pages.
+
+## Functionalities
+* Real-time database with Firebase
+* Updating data from form input boxes
+* Updating data from checkboxes
+* Manipulating & Retrieving data from database
+* Form input validation
+* Login Authentication
 
 ## Prerequisites
 
@@ -37,10 +44,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ### Firebase
 
