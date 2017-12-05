@@ -8,11 +8,6 @@ export default Controller.extend({
      actions: {
          selectItem: function( item ) {
              this.set('selectedItem', item);
-         },
-
-         loadProfile() {
-           const username = this.get('username');
-           console.log(username);
          }
      }
 });
