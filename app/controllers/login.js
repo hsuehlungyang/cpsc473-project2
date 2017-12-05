@@ -12,7 +12,6 @@ export default Controller.extend({
   isDisabled: Ember.computed.not('isValid'),
 
   actions: {
-   sendMessage() {
      login() {
      this.set('name', '');
      this.set('password', '');
