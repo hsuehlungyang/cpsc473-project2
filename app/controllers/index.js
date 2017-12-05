@@ -115,7 +115,8 @@ export default Controller.extend({
             alert("Hi " + username);
           }
           else{
-            //this.transitionToRoute('index');
+            console.log("in else");
+            this.refresh();
           }
         newInvitation.save();
         this.set('responseMessage', `Thank you! We've just saved your profile.`);
