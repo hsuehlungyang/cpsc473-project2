@@ -42,6 +42,13 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 Specify what it takes to deploy your app.
 
+### Firebase
+
+firebase.google.com
+Email/Username: 473.project2@gmail.com
+Password: bobameetschurros
+Project name: BobaMeetsChurros
+
 ## Further Reading / Useful Links
 
 * [ember.js](https://emberjs.com/)
