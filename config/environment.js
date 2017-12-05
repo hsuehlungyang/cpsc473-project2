@@ -3,14 +3,14 @@
 
 module.exports = function(environment) {
   let ENV = {
+    torii: {
+    sessionServiceName: 'session'
+    },
+    
     modulePrefix: 'boba-meets-churro',
     environment,
     rootURL: '/',
     locationType: 'auto',
-
-    torii: {
-    sessionServiceName: 'session'
-    },
 
     firebase: {
       apiKey: 'AIzaSyAqLN1EK57Hkw53IkJzFiCXm78dngk04QU',

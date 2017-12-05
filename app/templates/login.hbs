@@ -1,4 +1,4 @@
-<div class="container-reg flex-center">
+    <div class="container-reg flex-center">
       <div class="flex align-items-center">
 
           <div class="text-center">
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="text-center" style='padding-top: 15px'>
-                  {{#link-to 'profile' }}<button class="btn btn-indigo" style='font-size: 20px;' {{action "signIn"}}>Login</button>{{/link-to}}
+                  {{#link-to 'profile' }}<button class="btn btn-indigo" style='font-size: 20px;' disabled={{isDisabled}}>Login</button>{{/link-to}}
                   <hr class="hr-light mb-3 mt-4">
                   <div class="inline-ul text-center d-flex justify-content-center">
                     <a class="icons-sm tw-ic"><i class="fa fa-twitter white-text"></i></a>
